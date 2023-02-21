@@ -1,3 +1,5 @@
+//models
+
 package models
 
 import (
@@ -14,7 +16,7 @@ type Dog struct {
 }
 
 //What are all the things I want to know about the organization
-type Inistitution struct {
+type Institution struct {
 	gorm.Model
 	Name string
 }
@@ -22,12 +24,12 @@ type Inistitution struct {
 //The physical building. Always owned by an instituion
 type Facility struct {
 	gorm.Model
-	Inistitution Inistitution
-	Address      string
-	PostalCode   PostalCode
-	City         City
-	Province     Province
-	Country      Country
+	Institution Institution
+	Address     string
+	PostalCode  PostalCode
+	City        City
+	Province    Province
+	Country     Country
 }
 
 type ImageFile struct {
